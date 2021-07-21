@@ -1,3 +1,21 @@
+# About the project 🍾
+
+Aiming to build a simple AMM where: 
+1. Only the contract creator can supply initial liquidity.
+2. The tokens traded on the AMM are IERC20.
+3. Only 2 tokens are inside the pool.
+4. Any external actor can come to the AMM and swap token A to token B and vice versa.
+5. The initial price is tokenASupplied / tokenBSupplied.
+6. Any trade should move the price.
+7.  A 0.5% fee is taken on each swap.
+
+
+
+
+
+
+
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
