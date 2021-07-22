@@ -4,12 +4,9 @@ pragma solidity ^0.8.4;
 import "hardhat/console.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
+// By default it will have 18 decimal places, which is fine by me.
 contract TokenA is ERC20 {
-    constructor(
-        string memory name,
-        string memory symbol,
-        uint256 initialSupply
-    ) ERC20(name, symbol) {
+    constructor(uint256 initialSupply) ERC20("Rock Lee","RKLEE") {
         _mint(msg.sender, initialSupply);
     }
 }
