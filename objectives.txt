@@ -1,0 +1,21 @@
+We would like you to prepare a hardhat project(+ points if it uses typescript).
+That project should implement a really simple AMM where:
+1. Only the contract creator can supply initial liquidity.
+    Done
+2. The tokens traded on the AMM are IERC20.
+    Done
+3. Only 2 tokens are inside the pool. 
+    Done 
+    I've used Ether and tokenA
+    If asked, I'll switch out Ether with tokenB
+4. Any external actor can come to the AMM and swap token A to token B and vice versa.
+    Done
+5. The initial price is tokenASupplied / tokenBSupplied.
+    Done
+6. Any trade should move the price.
+    Done
+7.  A 0.5% fee is taken on each swap.
+    Done
+
+Also include as much tests as possible.
+Additional points will be given for a Kovan deployment.
