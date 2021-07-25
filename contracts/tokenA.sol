@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 // By default it will have 18 decimal places, which is fine by me.
 contract TokenA is ERC20 {
-    constructor(uint256 initialSupply) ERC20("Rock Lee","RKLEE") {
+    constructor(uint256 initialSupply) ERC20("Nethermind Token","NETMD") {
         _mint(msg.sender, initialSupply);
     }
 }
