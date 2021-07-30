@@ -1,12 +1,19 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Greeter = await hre.ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy("Hello, Hardhat!");
+  const TokenA = await hre.ethers.getContractFactory("TokenA");
+  const tokenA = await TokenA.deploy(100000000000); 
 
-  await greeter.deployed();
+  await tokenA.deployed();
 
-  console.log("Greeter deployed to:", greeter.address);
+  console.log("TokenA is deployed to: ", tokenA.address);
+
+  const ExchangeBusinessLogic = await hre.ethers.getContractFactory("ExchangeBusinessLogic");
+  const saxenismSwap = await ExchangeBusinessLogic.deploy(tokenA.address);
+  
+  await saxenismSwap.deployed();
+
+  console.log("saxenism-swap is deployed to: ", saxenismSwap.address);
 }
 
 main()

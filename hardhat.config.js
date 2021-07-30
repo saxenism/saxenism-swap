@@ -1,5 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 
+let secret = require("./secret.json");
+
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
 
@@ -17,8 +19,9 @@ module.exports = {
     artifacts: './src/artifacts',
   },
   networks: {
-    hardhat: {
-      chainId: 1337
+    kovan: {
+      url: secret.url,
+      accounts: [secret.key]
     }
   }
 };
