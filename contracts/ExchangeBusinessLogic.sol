@@ -105,7 +105,7 @@ contract ExchangeBusinessLogic is ERC20{
         uint tokensOwed = getAmount(msg.value, (address(this).balance - msg.value), tokenReserve);
 
         //_minTokens is the least number of tokenA that the user expects to get from the trade
-        require(tokensOwed > _minTokens, "Insufficient tokens available. Adjust slippage.");
+        require(tokensOwed >= _minTokens, "Insufficient tokens available. Adjust slippage.");
 
         IERC20(tokenAddress).transfer(msg.sender, tokensOwed);
     }
@@ -116,7 +116,7 @@ contract ExchangeBusinessLogic is ERC20{
         uint etherOwed = getAmount(_tokenInjected, tokenReserve, address(this).balance);
 
         //_minEther is the least Eth that the user expects from this trade
-        require(etherOwed > _minEther, "Insufficient Ether. Adjust slippage.");
+        require(etherOwed >= _minEther, "Insufficient Ether. Adjust slippage.");
 
         IERC20(tokenAddress).transferFrom(msg.sender, address(this), _tokenInjected);
         payable(msg.sender).transfer(etherOwed);
