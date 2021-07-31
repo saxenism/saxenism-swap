@@ -29,8 +29,10 @@ Aiming to build a simple AMM where:
 12. Since a fee of 0.5% is levied on every trade, it has to be divided among the LPs in proportion of the liquidity that they provided.
 13. So, every liquidity provider is issued LP tokens which can be used to redeem the LP's liquidity and the interest earned from exchange fee.
 14. Formula used for distributing the LP tokens such that they always represent the correct ratio is:
-    LPTokensMinted = (totalSupplyOfLPTokens * etherDeposited) / etherInContract
-15. I could also have used the reserves of NETMD, but I went ahead with ether reserves.
+
+
+    `LPTokensMinted = (totalSupplyOfLPTokens * etherDeposited) / etherInContract`
+15. I could also have used the reserves of **NETMD**, but I went ahead with ether reserves.
 
 
 
