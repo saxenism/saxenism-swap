@@ -33,6 +33,12 @@ Aiming to build a simple AMM where:
 
     `LPTokensMinted = (totalSupplyOfLPTokens * etherDeposited) / etherInContract`
 15. I could also have used the reserves of **NETMD**, but I went ahead with ether reserves.
+16. 24 tests that thoroughly check the functioning of saxenism-swap (our AMM)
+
+# Ongoing Work:
+
+1. A UI for users to interact with the smart contracts.
+2. UI is being written in Javascript using the Svelte framework.
 
 
 
