@@ -17,7 +17,7 @@ Aiming to build a simple AMM where:
 
 1. Used a *Moralis* node and deployed the AMM (saxenism-swap) to the Kovan Ethereum test network.
 2. There is a singular contract called `ExchangeBusinessLogic.sol` that contains the business logic of carrying out trades/exchanges between only two tokens. No contract factory has been created for introducing multiple pairs.
-3. The tokens in the pool are **Ether** (kETH) and another token called **Nethermind Token (NETMD)** deployed at [0x96273AAc53dED55e0cE26E7dd4d834662F163516](https://kovan.etherscan.io/address/0x96273AAc53dED55e0cE26E7dd4d834662F163516) on the Kovan test network.
+3. The tokens in the pool are **Ether** (kETH) and another token called **NETMD** deployed at [0x96273AAc53dED55e0cE26E7dd4d834662F163516](https://kovan.etherscan.io/address/0x96273AAc53dED55e0cE26E7dd4d834662F163516) on the Kovan test network.
 4. The total supply of **NETMD** is 100,000,000,000 with 18 decimal places.
 5. Contract deployer is the address `0x917A525DEe98DF975C8D47C5510BF0493f9C8299`.
 6. The contract deployer also has the entire supply of **NETMD** initially.
